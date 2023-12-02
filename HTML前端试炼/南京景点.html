@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>南京景点</title>
+
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="南京景点.css">
+    <script src="cdnjs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="cdnjs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    
+</head>
+
+<body>
+    
+    <div class="header" style="width: 100%; height: 50px;">
+
+        <!-- <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="login.html">登录/注册</a></li>
+        </ul> -->
+        <table style="width: 100%;">
+            <tr>
+                <td><a href="南京景点.html" style="line-height: 40px;">主页</a></td>
+                <td><a href="shopping.html">我的订单</a></td>
+                <td>
+                    <div class ="box">
+                        <input type="text" placeholder="请输入搜索内容" id="text">
+                        <input type="image" src="R-C.png" id="search">
+                    </div>
+                </td>
+                <td><a href="login.html">登录/注册</a></td>
+                <td><span id="usrn" style="padding: 10px;"></span><button type="button" onclick="logout()">退出登录</button></td>
+            </tr>
+        </table>
+    </div>
+    <div class="overall">
+        <!-- 内容  -->
+        <div class="content">
+            <!-- 轮播图片 -->
+            <ul>
+                <li><img src="picture/城墙.jpg" alt=""></li>
+                <li><img src="picture/夫子庙.jpg" alt=""></li>
+                <li><img src="picture/纪念馆.jpg" alt=""></li>
+                <li><img src="picture/总统府.jpg" alt=""></li>
+                <li><img src="picture/玄武湖.jpg" alt=""></li>
+            </ul>
+            <!-- 轮播图的点 -->
+            <ol>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ol>
+        </div>        
+    </div>
+    <div style="width: 90%; margin: auto;">
+        <div class="introduction">
+            <h1 class="NJ">南京</h1>
+            <p class="simple_introduction">
+            &nbsp&nbsp&nbsp&nbsp南京是中国四大古都之一，素有“六朝古都”、“十朝都会”之美誉，历史源远流长，文化底蕴厚重，各类遗存众多，历史名人辈出，是中华文明的
+            重要发祥地之一，是黄河文明与长江文明的交汇地。这座城市之中有许多风景名胜。
+            </p>
+        </div>
+        <div class="div1">
+            <a href="秦淮河.html" target="_blank">
+                <div class="jingdian" style="background: url(picture/秦淮河.jpg);">
+                    <span>秦淮河</span>
+                </div>
+            </a>
+            
+            <a href="中山陵.html" target="_blank">
+                <div class="jingdian" style="background: url(picture/中山陵.jpg);">
+                    <span>中山陵</span>
+                </div>
+            </a>
+            
+             
+            <a href="纪念馆.html" target="_blank">
+                <div class="jingdian" style="background: url(picture/纪念馆.jpg);">
+                    <span>侵华日军南京大屠杀遇难同胞纪念馆</span>
+                </div>
+            </a>
+        </div>
+       
+       <div class="div1">
+               <a href="玄武湖.html" target="_blank">
+                    <div class="jingdian" style="background: url(picture/玄武湖.jpg);">
+                        <span>玄武湖</span>
+                    </div>
+               </a>
+            
+            
+               <a href="总统府.html" target="_blank">
+                  <div class="jingdian" style="background: url(picture/总统府.jpg);">
+                     <span>总统府</span>
+                  </div>
+               </a>
+            
+            
+               <a href="夫子庙.html" target="_blank">
+                   <div class="jingdian" style="background: url(picture/夫子庙.jpg);">
+                      <span>夫子庙</span>
+                    </div>
+               </a>
+        </div>
+    </div>
+    <script src="slideshow.js"></script>
+    <script>
+        function logout(){
+            var user=localStorage.getItem('username');
+            $.ajax({url:"logout/",
+            type:"POST",
+            data:'username='+user,
+            success:function(e){if(e.ret==0){localStorage.clear();alert("已退出登录");window.location.reload();}},
+            error:function(e,n){alert("错误: "+e.msg)}})
+        }
+        if(localStorage.getItem('is_log')=='true'){
+            var usrn=document.getElementById("usrn");
+            usrn.innerHTML="欢迎："+localStorage.getItem("nickname");
+        }
+    </script>
+</body>
+
+</html>

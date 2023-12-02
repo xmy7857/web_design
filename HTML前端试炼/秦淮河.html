@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>秦淮河</title>
+        <link rel="stylesheet" href="秦淮河.css">
+        <link rel="stylesheet" href="slideshow.css">
+    </head>
+    
+    <script src="event_processing.js"></script>
+    <body>
+        
+        <div class="overall">
+            <!-- 内容  -->
+            <div class="content">
+                <!-- 轮播图片 -->
+                <ul>
+                    <li><img src="秦淮河/1.jpg" alt=""></li>
+                    <li><img src="秦淮河/2.jpg" alt=""></li>
+                    <li><img src="秦淮河/3.jpg" alt=""></li>
+                    <li><img src="秦淮河/4.jpg" alt=""></li>
+                    <li><img src="秦淮河/5.jpg" alt=""></li>
+                </ul>
+                <!-- 轮播图的点 -->
+                <ol>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ol>
+            </div>        
+        </div>
+        <div class="passige" id="content">
+            <h1 >秦淮河</h1><h3 style="display: inline;">成人票：30元/人；儿童票：10元/人；学生票：20元/人</h3>
+            <button type="button" id="buying_qinhuai" onclick="ticket_buy_page()">点击订票</button>
+            <!-- 搜索 -->
+            <input type="text" id="keyword" placeholder="输入关键词...">  
+            <button onclick="highlightKeywords()">搜索</button>  
+            <!-- 搜索 -->
+            
+            <h2>简介</h2>
+            <div class="flex">
+                <!-- <img id="img1"src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=2034577399,405362079&fm=26&gp=0.jpg" width="400px"/> -->
+                <p> 秦淮河是南京的文化摇篮，是江宁的母亲河。
+                    相传在7000万年以前，秦淮河自然淋漓的雏形就已形成。秦淮河本名龙藏浦，汉时称淮水又称小江，唐代以后称秦淮河。<br>
+                    &nbsp &nbsp &nbsp &nbsp秦淮河由南向北纵贯江宁区，主河道一百多公里，是我区境内最大最主要的水系。沿
+                    河两岸圩田地区历来是鱼米之乡，丘陵地区依山傍水风景如画，不但促进了江宁古城镇的发育
+                    ，而且养育着世世代代的江宁人民。<br>
+                    &nbsp &nbsp &nbsp &nbsp屈曲秦淮济万家，这里流淌着历代无数篇章。吴大帝孙权筑淮立埭，凿通云阴中道。明朝
+                    初期天生桥工程开建后，秦淮河与溧水河又成为通往皖南、浙北的水运航道。特别是进入金陵
+                    城内的那一段号称十里秦淮，更是红楼鳞次栉比，画舫游船首并尾接，成为文人骚客游憩的必
+                    至场所，使得秦淮河流域的历史故事更加多姿多彩。<br>
+                    &nbsp &nbsp &nbsp &nbsp秦淮河历史故事以人为主线，山水结合，天人合一。穿越时空隧道从远古走来，既神奇夸
+                    张，又涉及江宁人民的生产、生活、经济、文化等方面，具有鲜明的地域特色，形成了 《小秦
+                    王鞭山开河》、《秦始皇赶山塞海》、《葛仙翁秦淮河显灵》、《秦淮河与湖熟板鸭》、《林
+                    （灵）顺兴建湖熟桥》和《河定桥的来历》等一系列历史故事。<br>
+                </p>
+            </div>
+            <h2>秦淮民居建筑群（河房）</h2>
+            <div class="flex">
+                <p>河房也叫“河厅”，意即河两边的房屋，特指南京秦淮河畔依水而建的房子。
+                    清代作家吴敬梓的《儒林外史》中有很多关于河房的描述。历史小说《白门柳》也多次提到南京秦淮河畔的河房，如余家河房、桃叶河房等。
+                    内秦淮河河房集中在内秦淮河两岸，是非常珍贵的历史文化遗存。
+                    史料记载: 
+                    &nbsp &nbsp &nbsp &nbsp秦淮河房，夹淮水而居，绿窗朱户，两岸交辉。夏月水漫，画船箫鼓，游兴至夜，为天下丽观。<br>
+                    &nbsp &nbsp &nbsp &nbsp秦淮河房的风格是随着历史的发展慢慢形成的，秦淮河房的建造最早可以追溯至孙吴时期。当时，吴的国君孙权
+                    在南京定都，并在秦淮河一带修建都城，秦淮河两岸也就出现了河房。
+                    随着商业的发展，两岸逐渐繁华，旖旎风光吸引了很多文人骚客、达官贵人的目光。吴代之后，一些有钱人也开始到秦淮河两岸修建河房居住，
+                    比如东晋时期的王导、谢安等豪门大族就在乌衣巷附近临河修建宅院。<br>
+                    &nbsp &nbsp &nbsp &nbsp明代，明太祖朱元璋定都南京，秦淮河一带更是商贾云集。因为用作考试用的贡院修建在秦淮河畔，每年都有数万
+                    考生涌进南京，于是在贡院周边诞生了一大批书肆、客栈、茶楼，王公贵族、达官显宦纷纷在此盖楼建宅，秦淮河房越发繁华起来。<br>
+                    &nbsp &nbsp &nbsp &nbsp秦淮河河房的建筑风格和南京古民居房的建筑风格一致，有“青砖小瓦马头墙，回廊挂落格扇窗”的特点。<br>
+                </p>
+                <div class="flex2">
+                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fm.tuniucdn.com%2Ffb2%2Ft1%2FG5%2FM00%2F11%2F41%2FCii-slowk-CIbbrvAAbnBORNCj4AAAvegD-UOAABucc320_w640_h480_c1_t0.jpg&refer=http%3A%2F%2Fm.tuniucdn.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614945132&t=7d8c4a3e37422d934fbfb50f2f41c06b" style="width: 300px;padding: 5px;"/>
+                    <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fres.book.ifeng.com%2Fattachments%2F2010%2F07%2F30%2Frd_rs_0a67d3acc50cdc85b386f3a92c687ac7.jpg&refer=http%3A%2F%2Fres.book.ifeng.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614945132&t=035c437807c97ae58bfad8a9c6ed4c18" style="width: 300px;padding: 5px;"/>
+                </div>
+            </div>
+            <img id="img2"src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg.pconline.com.cn%2Fimages%2Fupload%2Fupc%2Ftx%2Fitbbs%2F1502%2F19%2Fc21%2F3171317_1424338202797.jpg&refer=http%3A%2F%2Fimg.pconline.com.cn&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1614915016&t=bc0b3e0e14f1ea481aae9e11f1dab282" style="width: 600px;padding: 5px;"/>
+            <h2>秦淮历史文化</h2>
+            <div class="history">
+                <p>
+                    秦淮河两岸有大小集市100多处，东昊以来一直是繁华的商业区和居民区。历代
+                    有许多过定官贵人住在秦淮河畔，如东晋时的主要谋士王导和谢安等。尽管隋唐
+                    以后，秦淮河畔渐趋衰败，但是，仍有许多文人墨客在这里凭吊吟叹。最有代表
+                    性的诗作是唐代著名诗人刘禹锡的《乌衣巷》：“朱雀桥边野草花，乌衣巷口夕阳
+                    斜。1旧时王谢堂前燕，飞人寻常百姓家”。秦淮河两岸建有不少佛寺，东晋时的瓦
+                    官寺，南朝时的安乐寺都非常著名。东晋时大画家顾恺之为瓦官寺画了《维摩诘居
+                    士像》，雕塑家戴逵父子铸造过五尊铜像。安乐寺里有著名画家张僧繇画的四条白
+                    龙，留下了“画龙点睛”的故事。<br>
+    
+                    &nbsp &nbsp &nbsp &nbsp明清时代，秦淮河畔人烟稠密，金粉楼台，十分繁华。秦淮河畔的夫子庙、贡院
+                    是封建统治者笼络和挑选人才的地方。明代吴敬梓的小说《儒林外史》中，对此
+                    有深刻的揭露。清代戏曲家孔尚任的《桃花扇》以秦淮河为背景，歌颂了歌妓李
+                    香君的高尚情操，揭露了统治阶级内部的矛盾和腐败，描写了国破家亡的悲剧。
+                </p>
+            <img style="display: inline; width: 45%;" src="https://img.mp.itc.cn/q_70,c_zoom,w_640/upload/20160511/c186e711c32742199cc19f21d81c50fd_th.jpg" style="height: 300px;padding: 5px;"/>
+            <img style="display: inline; width: 45%" src="https://img.mp.itc.cn/q_70,c_zoom,w_640/upload/20160511/ae7445d16a1845f29b88d98de5dc1dfd_th.webp" style="height: 300px;padding: 5px;"/>
+            </div>
+        </div>
+        <script>
+            function ticket_buy_page(){
+                console.log("点击购票");
+                var is_log=localStorage.getItem('is_log');
+                if(is_log!='true'){
+                    window.location.href='login.html';
+                    return;
+                }
+                window.location.href="ticketbuypage.html?scenic=qinhuaihe";
+            }
+
+            function highlightKeywords() {  
+                var keyword = document.getElementById('keyword').value;  
+                var content = document.getElementById('content');  
+                var keywords = keyword.split(' ');  
+                
+                // 移除之前的高亮样式  
+                content.style.backgroundColor = '';  
+                
+                for (var i = 0; i < keywords.length; i++) {  
+                    var regex = new RegExp('(' + keywords[i] + ')', 'g');  
+                    var highlightedContent = content.innerHTML.replace(regex, '<span style="background-color: yellow;">$&</span>');  
+                    content.innerHTML = highlightedContent;  
+                }  
+		    }
+        </script>
+        <script src="slideshow.js"></script>
+
+        
+        
+    </body>
+
+</html>

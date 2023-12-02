@@ -1,0 +1,38 @@
+.continer_hezi{
+    width: 1000px;
+    margin: auto;
+    display: block;
+    
+}
+
+
+p{
+    text-indent: 2em;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.passige{
+    position: relative;
+    width: 70%;
+    margin: auto;
+    display: block;
+    
+}
+
+.flex{
+    display: flex;
+    flex-direction: row;
+}
+.flex2{
+    display: flex;
+    flex-direction: column;
+}
+
+body{
+    background-color: linen;
+    position: static;
+}
+.flex p{
+    display: block;
+}

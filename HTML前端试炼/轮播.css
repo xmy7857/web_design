@@ -1,0 +1,66 @@
+.hezi,ul,li{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 500px;
+    height: 400;
+    position: relative;
+    margin: auto;
+ }
+.container img{
+    position: absolute; 
+    width: 100%;
+    transition-duration: 1s;
+    opacity: 0; 
+}
+.container img.on{
+    opacity: 1;
+}
+.left, .right{
+    position: absolute;
+    top: 100px; 
+    bottom: 30;
+    width: 60px;
+    height: 100px;
+    line-height: 100px;
+    background-color: #666;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 60px;
+    color: #ccc;
+    display: none;
+    cursor: pointer;
+}
+.left{
+    left: 0;
+}
+.right{
+    right: 0;
+}
+.container:hover .left, .container:hover .right{
+    display: block;
+}
+.left:hover, .right:hover{
+    color: #fff;
+}
+.container ul{
+    position: absolute;
+    top: 300px;
+    max-width: 500px;
+    padding: 5px 200px;
+}
+.container ul li{
+    list-style: none;    
+    float: left;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-left: 10px;
+    background-color: #ccc;
+    cursor: pointer;
+}
+.container ul li.active{
+    background-color: #fff;
+    
+}

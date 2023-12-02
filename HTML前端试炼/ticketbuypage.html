@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订票</title>
+    <script src="cdnjs/jquery/3.5.0/jquery.min.js"></script>
+    <script src="cdnjs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="jeDate-gh-pages/jetest/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="jeDate-gh-pages/skin/jedate.css">
+    <script type="text/javascript" src="jeDate-gh-pages/src/jedate.js"></script>
+    <script src="ticketbuy_eventpocessing.js"></script>
+</head>
+
+<body style="background-color:linen;width: 90%; margin: auto;">
+    <h2 id="cost">总价：</h2>
+    <br/>
+    <input type="reset" value="清除表单数据" id="cle">
+    <button type="button" id="addtable">增加表单</button>
+    <input type="submit" value="提交表单" id="sub">
+    <div id="tableContainer"></div>
+    <script>
+        var bt=document.getElementById("total");
+        var sub=document.getElementById("sub");
+        var cle=document.getElementById("cle");
+        //console.log(radios[0].value)
+        var scenic=window.location.search.slice(1);
+        
+        console.log(scenic);
+        sub.onclick=subm;
+        cle.onclick=clear;
+        //
+        $.ajax({url:"ticket/",
+            type:"POST",
+            data:scenic,
+            success:SUC,
+            error:function(e,n){alert("错误: "+e.msg)}})
+        //
+        addTableBtn = document.getElementById("addtable");
+        tableContainer = document.getElementById("tableContainer");
+        addTableBtn.onclick = add_table;
+    </script>
+    
+</body>
+</html>

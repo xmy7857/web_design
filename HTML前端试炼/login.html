@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>登录</title>
+  <style>
+    body {
+      background: url("picture/城墙.jpg") no-repeat;
+      background-size: 100% 130%;
+    }
+
+    #login_box {
+      width: 20%;
+      height: 400px;
+      background-color: #00000060;
+      margin: auto;
+      margin-top: 10%;
+      text-align: center;
+      border-radius: 10px;
+      padding: 50px 50px;
+    }
+
+    h2 {
+      color: #ffffff90;
+      margin-top: 5%;
+    }
+
+    #input-box {
+      margin-top: 5%;
+    }
+
+    span {
+      color: #fff;
+    }
+
+    input {
+      border: 0;
+      width: 60%;
+      font-size: 15px;
+      color: #fff;
+      background: transparent;
+      border-bottom: 2px solid #fff;
+      padding: 5px 10px;
+      outline: none;
+      margin-top: 10px;
+    }
+
+    button {
+      margin-top: 50px;
+      width: 60%;
+      height: 30px;
+      border-radius: 10px;
+      border: 0;
+      color: #fff;
+      text-align: center;
+      line-height: 30px;
+      font-size: 15px;
+      background-image: linear-gradient(to right, #ff5858, #522f00);
+      /* margin: 10px; */
+    }
+
+    #sign_up {
+      margin-top: 45%;
+      margin-left: 60%;
+    }
+
+    a {
+      color: #7b7b7b;
+      margin: 10px;
+    }
+  </style>
+  <script src="cdnjs/jquery/3.5.0/jquery.min.js"></script>
+
+  <script src="cdnjs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script src="event_processing.js"></script>
+<body>
+  <div id="login_box">
+    <h2>登录</h2>
+    <div id="input_box">
+      <input type="text" id="usrname" placeholder="请输入用户名" onkeydown="on_return()">
+    </div>
+    <div class="input_box">
+      <input type="password" id="usrpswd" placeholder="请输入密码" onkeydown="on_return()">
+    </div>
+    <button type="submit" id="login" onclick="postLoginRequest()">登录</button><br>
+    <div >
+        <a href="register.html">注册</a>
+    </div>
+  </div>
+  
+  <script>
+    function SUC(e,n){
+      if(0===e.ret){
+        //window.location.href="/index.html";
+        alert("登陆成功：欢迎"+e.nickname);
+        // 假设后端返回的用户登录凭证为 token
+        var nickname = e.nickname;
+        var usr=e.username;
+        // 将用户登录凭证保存到本地
+        localStorage.setItem("nickname", nickname);
+        localStorage.setItem("username",usr);
+        localStorage.setItem("is_log",true);
+        window.location.href="南京景点.html";
+      }
+      else{
+        alert("登录失败 : "+e.msg);
+        $("#password").val("");
+      }
+    }
+    function postLoginRequest(){
+      console.log("login");
+      var e=document.getElementById("usrname").value;
+      var n=document.getElementById("usrpswd").value;
+      if(0!==e.length){
+        if(0!==n.length){
+          $.ajax({url:"/login/",
+            type:"POST",
+            data:"username="+e+"&password="+n,
+            success:SUC,
+            error:function(e,n){alert("错误: "+e.msg)}})
+        }
+        else alert("请输入密码");
+      } 
+      else alert("请输入用户名");
+    }
+    function curTimestamp(){
+      var e=(new Date).getTime();
+      return Math.floor(e/1e3);
+    }
+    var lastSendReqTime=0;
+    function on_return(e){
+      if(13==e){
+        var n=curTimestamp();
+        if(n-window.lastSendReqTime<5)return;
+        window.lastSendReqTime=n,postLoginRequest()
+      }
+    }
+    document.onkeydown=function(e){on_return(window.event?window.event.keyCode:e.which)}
+  </script>
+</body>
+</html>
+

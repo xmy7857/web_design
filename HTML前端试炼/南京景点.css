@@ -1,0 +1,151 @@
+
+.chengqiang{
+    top: 0;
+    height: 800px; 
+    background-image: url(picture/城墙.jpg);
+    /* background-position: center ; */
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */ 
+}
+.chengqiang>h1{
+    position: relative;
+    top: 100%;
+    transform: translate(0,-100%);
+    line-height: 370px;
+    font-size: 200px;
+    color: white;
+    font-style: inherit;
+}
+.introduction{
+    max-width: 1560px;
+    margin: auto;
+}
+.simple_introduction{
+    /* text-indent: 0.75em; */
+    max-width: 1560px;
+    font-size: 30px;
+    color: gray;
+}
+img{border:0}
+span{ 
+    text-align:center;
+ } 
+.jingdian{
+    position: relative;
+    width: 400px;
+    height: 240px;
+    padding: 20px;
+    margin: 20px auto;
+ }  
+.jingdian span{
+    display:none;
+    text-decoration:none
+}
+.jingdian:hover{
+    cursor:pointer
+} 
+.jingdian:hover span{
+    display:block;
+    position:absolute;
+    bottom:0;
+    left:0;
+    color:#FFF;
+    width:440px; 
+    z-index:10;
+    height:36px;
+    line-height:36px;
+    background:#000;
+    filter:alpha(opacity=60);
+    -moz-opacity:0.5;
+    opacity: 0.5;
+}
+
+.div1{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    /* left: 50%; 
+    /* transform: translate(-50%,0); */
+    width: 100%;
+    margin: auto;
+
+}
+
+.continer{
+    width: 432px;
+    height: 272px;
+}
+
+.NJ{
+    border-bottom: solid gray;
+    font-size: 50px;
+}
+ body{
+     background-color: linen;
+     top: 0px;
+     padding: 0;
+     margin: 0;
+     /* width: 90%;
+     margin: auto; */
+ }
+
+  /* ul {
+    list-style-type: none;
+    float: right;
+    margin: 0;
+    padding: 0;
+    
+  } */
+  
+  li {
+    float: left;
+  }
+  
+    li a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+  } 
+
+.header {
+    min-width: 1190px;
+    background: rgb(201, 175, 148);
+    text-align: center;
+    padding-top: 0px;
+} 
+
+td{
+    width: 20%;
+}
+
+.box{
+    width:200px;
+    height: 33.5px;
+    line-height: 33.5px;
+    background-color: linen;
+    position: relative;
+    margin: auto;
+    border:solid silver 0.5px;
+    border-radius: 10px 10px 10px 10px ;
+    top: 2px;
+}
+#text{
+    width:156px;
+    height: 31.5px;
+    border-radius: 10px 0px 0px 10px ;
+    background-color: #FFF5EE;
+    border:solid silver 0.5px;
+    position: relative;
+    left:-5px;
+    top:-5.5px; 
+
+}
+#search{
+    width: 26px;
+    height:26px;
+    font-size: 19px;
+    border-radius: 10px 10px 10px 10px ;
+    position: relative;
+    right: 4px;
+    top: 4px;
+}

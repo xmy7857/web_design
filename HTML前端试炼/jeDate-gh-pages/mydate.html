@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link type="text/css" rel="stylesheet" href="test/jeDate-test.css">
+    <link type="text/css" rel="stylesheet" href="skin/jedate.css">
+    <script type="text/javascript" src="src/jedate.js"></script>
+</head>
+<body>
+    <div class="jeitem" id="aaa">
+        
+    </div>
+
+    <script>
+        var m=document.getElementById("aaa");
+        m.innerHTML=`
+        <label class="jelabel">年月日选择</label>
+        <div class="jeinpbox"><input type="text" class="jeinput" id="test03" placeholder="YYYY-MM-DD"></div>
+        `
+        jeDate("#test03",{
+            //onClose:false,
+            theme:{ bgcolor: "rgb(250, 227, 203)",color:"#666666", pnColor:"rgb(201, 175, 148)"},
+            format: "YYYY-MM-DD"
+        });
+   </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+
+body{
+    background-color: linen;
+}
+
+div{
+    margin: auto;
+    
+}
+p{
+    text-indent: 2em;
+    font-size: 20px;
+}
+
+.passige{
+    width: 70%;
+    margin: auto;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+}

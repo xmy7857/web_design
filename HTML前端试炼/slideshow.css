@@ -1,0 +1,111 @@
+/* 设置整体大框架 */
+.overall{
+    /* 设置窗口大小 */
+    width: 900px;
+    height: 500px;
+
+    /* 将弹性 <div> 元素的所有项目的居中对齐 */
+    align-items: center;
+
+    /* 设置图片外边距 左右居中 上方5% */
+    margin: 5% auto; 
+}
+
+.content{
+    /* 设置相对定位 */
+    position: relative;
+    height: 400px;
+}
+
+.content ul{
+    /* 去除标签<ul><li></li></ul>默认加的样式 */
+    list-style-type: none;
+}
+
+.content ul>li{
+    width: 600px;
+    height: 300px;
+
+    /* 设置绝对定位 */
+    position: absolute;
+
+    /* 设置过度效果 时间为1s */
+    transition: 1s;
+
+    /* 设置最大透明度 默认一开始图片为透明的 当下面js加载的时候
+        第一张图片设置为不透明
+    */
+    opacity: 0;
+}
+
+/* 设置每个图片的样式 */
+.content ul>li img{    
+    /* 设置每一张图片的大小 */
+    width: 900px;
+    height: 500px;
+
+    /* 设置圆角边框 */
+    /* border-radius: 5%; */
+    
+    /* 设置边框样式 */
+    /* border: 5px solid #0e0600;         */
+}
+
+/* 设置轮播图下面的小点 */
+.content ol{
+    /* 设置相对定位 */
+    position: relative;
+
+    /* 设置网格布局 */
+    display: grid;
+    
+    /* 设置网格布局中的列数及宽度 */
+    grid-template-columns: repeat(5, 30px);
+
+    /* 设置网格布局中的行数及宽度 */
+    grid-template-rows: auto;
+
+    /* 设置网格行与列之间的间隙 */
+    /* 间隙为1em */
+    grid-gap: 1em;
+    gap:1em;
+
+    /* 右浮动 */
+    float: right;
+
+    /* 设置浮点的向上的内边距 */
+    margin-top: 450px;
+
+    /* 去除列表样式 */
+    list-style: none;
+
+    /* 把图像的上边缘设置在其包含元素上边缘之下0px高的位置 */
+    top: 0;
+
+    /* 把图像的左边缘设置在其包含元素上边缘之下0px高的位置 */
+    left: 0;
+}
+
+.content ol li{
+    /* 设置每个小点的大小 */
+    width: 10px;
+    height: 10px;
+
+    /* 设置里面的文字的大小 */
+    font-size: 15px;
+
+    /* line-height 属性设置行间的距离（行高） */
+    line-height: 20px;
+
+    /* 浮动左对齐 */
+    float: left;
+
+    /* 设置文本居中 */
+    text-align: center;
+
+    /* 把表格做成圆点 */
+    border-radius: 2em;
+
+    /* 设置圆点的边框 */
+    border: 2px solid #af9d9d;
+}
